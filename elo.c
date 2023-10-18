@@ -7,6 +7,7 @@
 
 // #define COLORS
 #define COLOR_GREEN_BOLD "\033[1;32m"
+#define COLOR_YELLOW_BOLD "\033[1;33m"
 #define COLOR_NORMAL "\033[0m"
 
 // Function to calculate the Probability
@@ -62,8 +63,10 @@ int main() {
 
   int K = 30;
   printf("\n");
+  printf(COLOR_YELLOW_BOLD);
   printf("Rating Jogador: ");
   scanf("%f", &Ra);
+  printf(COLOR_NORMAL);
   printf("---\n");
   printf("Rating Adversário 1: ");
   scanf("%f", &Rb);
@@ -81,8 +84,10 @@ int main() {
   // Function call
   EloRating(Ra, Rb, Rc, Rd, Re, Rf, K, d);
   while (Ra != 0) {
+    printf(COLOR_YELLOW_BOLD);
     printf("Rating Jogador: ");
     scanf("%f", &Ra);
+    printf(COLOR_NORMAL);
     printf("---\n");
     printf("Rating Adversário 1: ");
     scanf("%f", &Rb);
